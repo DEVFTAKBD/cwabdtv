@@ -43,18 +43,45 @@ padding:1.5em;
 <marquee class="GeneratedMarquee" direction="left" scrollamount="5" behavior="scroll">We do not host any files on its servers. All files or contents hosted on third-party websites. We will not accept responsibility for content hosted on third-party websites. We just index those links which are already available on the internet.</marquee>
 
 
-<!DOCTYPE html><html><head>
-	<script>
-		function disableClick(){
-			ducument.oneclick=function(event){
-				if (event.button == 2) {
-					alert('Right Click Message');
-					return false;
-				}
-			}
-		}
-	</script>
- 
+<script language="JavaScript">
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>  
 
 
 
@@ -98,7 +125,8 @@ padding:1.5em;
 
 
 
-
+<div class="marquee yellow"><span> <i class="" style="font-size: 45 pt" aria-hidden="true"></i></span> <marquee scrollamount="5" direction="left" onmouseover="stop()" onmouseout="start()">যেকোনো চ্যানেল প্লে করার পর কিছুক্ষন অপেক্ষা করুন, প্রথমে Buffer করতে পারে।
+Share with Your friends BY 007</marquee> </div> 
 
 	
 </center>
