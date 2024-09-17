@@ -1,25 +1,28 @@
-<link rel="stylesheet" href="https://cwabdtv.eu.org/fluid-player-2.4.0/fluidplayer.min.css" type="text/css"/>
-<script src="https://cwabdtv.eu.org/fluid-player-2.4.0/fluidplayer.min.js"></script>
-<video id='hls-video'>
-    <source src='https://cdn.hotflix-bd.online/hotflixbd/T-Sports/index.m3u8' type='application/x-mpegURL'/>
-</video>
+<html>
+	<head>
+		<title>Fluid Player</title>
+		<link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+		<script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+	</head>
+	<body>
 
+		<video id='my-video' controls style="width: 640px; height: 360px;">
+			<source data-fluid-hd src='https://cdn.hotflix-bd.online/hotflixbd/T-Sports/index.m3u8' title='1080p' type='application/x-mpegURL' />
 <script>
-fluidPlayer(
-    'hls-video',
-    {
-        layoutControls: {
-            primaryColor: "#28B8ED",
-            autoPlay: true,
-            fillToContainer: true,
-            allowTheatre: true,
-            controlBar: {
-			           autoHide: true,
-			           autoHideTimeout: 3,
-			           animated: true
-                 },
 
-        }
-    }
+fluidPlayer(
+	'my-video',
+	{
+		layoutControls: {
+			primaryColor: "#28B8ED"
+		},
+		layoutControls: {
+			allowDownload: false // Default false
+		},		
+	}
 );
+
+	
 </script>
+	</body>
+</html>
