@@ -1,0 +1,114 @@
+
+
+@media (min-width:992px) and  (max-width:1920px){
+	nav.navbar.bootsnav ul.nav li:hover ul{display:block !important;}
+}
+
+@media (min-width:100px) and  (max-width:1024px){
+	.logo_hldr img{max-width:200px;}
+	.owl-theme .owl-controls{position:static;margin-top:10px;}
+	.owl-theme .owl-controls .owl-buttons .owl-prev{position:static;margin:0px 3px;}
+	.owl-theme .owl-controls .owl-buttons .owl-next{position:static;margin:0px 3px;}
+}
+
+@media (min-width:100px) and  (max-width:991px){
+	.logo_hldr {padding-top: 10px;padding-bottom: 5px;}
+	.logo_hldr a{position:relative;z-index:100;}
+	.Play_hldr{overflow:hidden;}
+	.banner .carousel .item{height:auto;}
+	.banner .carousel-inner > .item > img{height:auto;width:100%;position:relative;}
+	.footer_bot, .footer_bot .developby{text-align:center;}
+	.footer_bot .developby{padding-top:6px;}
+	.footer_top{text-align:center;}
+	.footer_top ul li{float:none;display:inline-block;}
+	.package-block ul{margin-top:20px;}
+	.top_menu{display:none;}
+	.mobile-menu-wrapper{display:block;}
+	.package-block .package-img{display:none;}
+	.package-block .row, .TV-logo .row{margin:0px;}
+	.login-page,.contact-page,.faq-page,.package-page{background-attachment:fixed;background-position:center bottom;}
+	.Play_TV{background-attachment:fixed;background-position:center top;}
+	.package-page{padding:0px;}
+	.inner-block{padding:60px 0px;}
+	.login_section{padding-top:100px;}
+	.login-left{text-align:center;}
+	.login-left h1,.login-left .apps-image h2{padding:0px 15px;}
+	.login_block{margin-top:30px;}
+	.login_block h2{font-weight:normal;}
+	.faq-image{max-width:180px;}
+	.package-single{padding-top:100px;}
+	
+}
+@media (min-width:100px) and  (max-width:767px){
+
+	.banner .carousel-indicators{bottom:0px;}
+	.Play_hldr{overflow:hidden;}
+	.m_topless60{margin-top:10px;}
+	.tv-icon{margin-bottom:5px;}
+	.apps-section h1{font-size:28px;}
+	.package-block ul{margin-bottom:20px;}
+	#myVideo{height:auto !important;}
+}
+
+
+@media (min-width:100px) and  (max-width:640px){
+	.logo_hldr{padding-top:6px;}
+	.logo_hldr img{max-width:140px;}
+	.TV-logo h1{font-size:24px;}
+	.apps-section h1,.apps-image h2{font-size:24px;}
+	.package-section,.apps-section{padding:40px 0px;}
+	.package-section h1{font-size:36px;}
+	.package-block h2{padding: 8px 20px 5px;font-size: 20px;line-height: 30px;}
+}
+
+@media (min-width:100px) and  (max-width:480px){
+	.logo_hldr{width:100%;padding-top:5px;}
+	.logo_hldr span{position:static;}
+	.apps-image img{max-width:120px;}
+	a.btn-hldr{font-size:12px;width:110px;padding:5px;}
+	.mobile-menu-wrapper{margin:0px;position:absolute;top:10px;right:15px;}
+	.head_top{padding-top:0px;padding-bottom:5px;}
+	.package-block .col-xs-6{width:100%;}
+	.mb0{margin-bottom:0px !important;}
+	.mt0{margin-top:0px !important;}
+	header{position:static;padding-bottom:5px;}	
+	.apps-section h1{padding:0px;}
+	.login_section{padding-top:60px;}
+	.login-left h1{font-size:28px;}
+	.apps-image{padding-top:0px;}
+	.login_block{padding:20px 15px;}
+	.Play_TV{padding-top:0px;}
+	
+}
+@media (min-width:100px) and  (max-width:380px){
+	.apps-section h1{font-size:22px;}
+	footer{font-size:11px;}
+	.new-reg-text, .btn-submit{float:left;margin-right:10px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
