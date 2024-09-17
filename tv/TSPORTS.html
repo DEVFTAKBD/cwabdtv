@@ -1,1 +1,25 @@
-<iframe src=https://www.hlsplayer.net/embed?type=m3u8&src=https://cdn.hotflix-bd.online/hotflixbd/T-Sports/index.m3u8 />
+<link rel="stylesheet" href="https://cwabdtv.eu.org/fluid-player-2.4.0/fluidplayer.min.css" type="text/css"/>
+<script src="https://cwabdtv.eu.org/fluid-player-2.4.0/fluidplayer.min.js"></script>
+<video id='hls-video'>
+    <source src='https://cdn.hotflix-bd.online/hotflixbd/T-Sports/index.m3u8' type='application/x-mpegURL'/>
+</video>
+
+<script>
+fluidPlayer(
+    'hls-video',
+    {
+        layoutControls: {
+            primaryColor: "#28B8ED",
+            autoPlay: true,
+            fillToContainer: true,
+            allowTheatre: true,
+            controlBar: {
+			           autoHide: true,
+			           autoHideTimeout: 3,
+			           animated: true
+                 },
+
+        }
+    }
+);
+</script>
