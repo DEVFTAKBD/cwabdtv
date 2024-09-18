@@ -1,25 +1,45 @@
-<link rel="stylesheet" href="https://cwabdtv.eu.org/fluid-player-2.4.0/fluidplayer.min.css" type="text/css"/>
-<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
-<video id='hls-video'>
-    <source src='https://medialive.akash-go.com/out/v1/4a5545d79c7a47ebb451eac8db300226/index.mpd' type='application/x-mpegURL'/>
-</video>
 
-<script>
-fluidPlayer(
-    'hls-video',
-    {
-        layoutControls: {
-            primaryColor: "#28B8ED",
-            autoPlay: true,
-            fillToContainer: true,
-            allowTheatre: true,
-            controlBar: {
-			           autoHide: false,
-			           autoHideTimeout: 3,
-			           animated: false,
-                 },
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include JW Player JavaScript Library -->
+    <script src="https://content.jwplatform.com/libraries/Z79JsmAO.js"></script>
+    <style>
+        /* Fullscreen styles for the player */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: black; /* Background color for better visibility */
         }
-    }
-);
-</script>
+
+        #jwplayerDiv {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a DIV container for JW Player -->
+    <div id="jwplayerDiv"></div>
+
+    <script>
+        // Initialize JW Player
+        jwplayer("jwplayerDiv").setup({
+            file: "https://medialive.akash-go.com/out/v1/4a5545d79c7a47ebb451eac8db300226/index.mpd",
+            type: "dash",  // Specify the type as DASH
+            drm: {
+                clearkey: {
+                    key: "a48f14c7731ee9491c9a70317e2c3d65",  // ClearKey DRM key
+                    keyId: "9268857091cc4c5f9b5bf401ac2c6bfa"  // ClearKey DRM key ID
+                }
+            },
+            width: "100%",  // Full width
+            height: "100%",  // Full height
+            stretching: "fill",  // Ensures the player fills the container
+            autostart: true,  // Set to true to autoplay if needed
+            controls: true,  // Show controls for playback
+        });
+    </script>
+</body>
+
