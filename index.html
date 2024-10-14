@@ -87,179 +87,281 @@ Share with Your friends BY -- Team Admin </marquee> </div>
 
 	<script src="js/jquery.min.js"></script>
 
-	<style type="text/css">
-    .custom-scroll{height:298px;}
-	  .related-tv-sec{margin-top:-80px;}
-	  .Play_TV{min-height:600px;}
-	  .tv-details img{max-width:80px;margin-right:10px;vertical-align:middle;}
-	  .tv-details ul.tv-server-duration li{clear:both;width:100%;float:left;border-bottom: 1px dashed #0d1215;}
-	  .tv-details ul.tv-server-duration li span{display:inline-block;width:60%;float:left;padding:0px 10px;}
-	  .tv-details ul.tv-server-duration li span:first-child{width:30%;}
-	  .tv-details ul.tv-server-duration li span:last-child{width:10%;text-align:right;}
-	  .owl-carousel .item{margin:0px 15px;}
-	</style>
-	<section class="Play_TV">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-8">
-					<div></br></div>
-					
-					<div class="video-holder">
-						<div class="embed-responsive embed-responsive-16by9">
-							<p><iframe name="play" src="/video/play.html" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="yes">Browser not supported! Please check from different browser or change device. Thanks</iframe></p>
-						</div>
-							</div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-4">
-				<div></br></div>
-					
-					<div class="recommend-block tv-details">
-						<h2 id="logodata"><a  href="/"><img  src="images/tv.png" alt="" />CWABDTV</a></h2>
-						<div class="custom-scroll mCustomScrollbar" id="programList">
-              <h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/BTV.html"><img src="/tv/images/BTV.png" alt="tv" />BTV</a></h2>
-							
+  <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* Set column direction for body */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2a2a2a;
+            overflow: hidden; /* Prevent scroll during loading */
+        }
 
-              <h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/INDEPENDENTTV.html"><img src="/tv/images/INDEPENDENT TV.jpg" alt="tv" />INDEPENDENT TV</a></h2>
-							
-
-              <h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/CHANNEL24.html"><img src="/tv/images/CHANNEL24.png" alt="tv" />CHANNEL24</a></h2>
-							
-
-       <h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/JAMUNATV.html"><img src="/tv/images/JAMUNATV.png" alt="tv" />JAMUNATV</a></h2>
-							
-
-              <h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/RTV.html"><img src="/tv/images/RTV.png" alt="tv" />RTV</a></h2>
-							
-
-              <h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/BANGLAVISION.html"><img src="/tv/images/BANGLAVISION.png" alt="tv" />BANGLAVISION</a></h2>
-							
-              <h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/NTV.html"><img src="/tv/images/NTV.png" alt="tv" />NTV</a></h2>
-							
-
-              <h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/ATNNEWS.html"><img src="/tv/images/ATNNEWS.png" alt="tv" />ATNNEWS</a></h2>
-
-		 <h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/EKATTOR.html"><img src="/tv/images/EKATTOR.png" alt="tv" />EKATTOR</a></h2>
-							
-							<h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/STARJALSHA.html"><img src="/tv/images/STAR JALSHA.jpg" alt="tv" />STAR JALSHA</a></h2>
-
-							<h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/ZEEBANGLA.html"><img src="/tv/images/ZEE BANGLA.jpg" alt="tv" />ZEEBANGLA</a></h2>
-
-
-							<h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/COLORSBANGLA.html"><img src="/tv/images/COLORS BANGLA.jpg" alt="tv" />COLORSBANGLA</a></h2>
-							
-<h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/COLORSHD.html"><img src="/tv/images/COLORS BANGLA.jpg" alt="tv" />COLORSHD</a></h2>
-
-							<h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/NICK.html"><img src="/tv/images/NICK.png" alt="tv" />NICK</a></h2>
-
-							
-							<h2 id="logodata"><a class="cl"  data-id="tv" target="play" href="/tv/NICK&SONIC.html"><img src="/tv/images/NICK&SONIC.png" alt="tv" />Nickelodeon Sonic</a></h2>	
-
-
-
-
-
-						</div>
-					</div>
-				</div>
-			</div>
-
-			
-
-
-		<!-- Codes by CWABDTV -->
-
-<script> 
-window.addEventListener('contextmenu', function (e) { 
-  // do something here... 
-  e.preventDefault(); 
-}, false);
-
-</script>
-
-
-
-
-
-
-			
-<style>
-        .alert {
+        header {
+            color: white;
             padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .success {
-            color: #155724;
-            background-color: #d4edda;
-            border: 1px solid #c3e6cb;
+        .hr {
+            width: 20%;
         }
 
-        .warning {
-            color: #856404;
-            background-color: #fff3cd;
-            border: 1px solid #ffeeba;
+        .tv-container {
+            display: flex;
+            width: 90%;
+            height: 80%;
+            max-width: 1200px;
+            flex-direction: column;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s; /* Fade-in effect */
         }
 
-        .error {
-            color: #721c24;
-            background-color: #f8d7da;
-            border: 1px solid #f5c6cb;
+        /* Loader styles */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2a2a2a;
+            z-index: 1000; /* On top of everything */
+            opacity: 1;
         }
 
-        .info {
-            color: #0c5460;
-            background-color: #d1ecf1;
-            border: 1px solid #bee5eb;
+        .loader div {
+            width: 15px;
+            height: 15px;
+            margin: 3px;
+            border-radius: 50%;
+            animation: bounce 0.6s infinite alternate;
         }
 
-        .primary {
-            color: #004085;
-            background-color: #cce5ff;
-            border: 1px solid #b8daff;
+        .loader div:nth-child(1) { background-color: #ff3d00; animation-delay: 0s; }
+        .loader div:nth-child(2) { background-color: #ffd600; animation-delay: 0.2s; }
+        .loader div:nth-child(3) { background-color: #76ff03; animation-delay: 0.4s; }
+        .loader div:nth-child(4) { background-color: #00e5ff; animation-delay: 0.6s; }
+        .loader div:nth-child(5) { background-color: #d500f9; animation-delay: 0.8s; }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
         }
 
-        .secondary {
-            color: #383d41;
-            background-color: #e2e3e5;
-            border: 1px solid #d6d8db;
+        /* Responsive channel list with more columns */
+        .channel-list {
+            width: 100%;
+            background: #1e1e1e;
+            color: white;
+            padding: 20px;
+            display: grid;
+            grid-gap: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            overflow-y: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            /* Dynamic columns based on screen size */
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         }
 
-        .dark {
+        .channel-item {
+            background: #333;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .channel-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            border: 5px solid #828282;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .channel-item span {
+            font-size: 14px;
             color: #fff;
-            background-color: #343a40;
-            border: 1px solid #6c757d;
+            text-align: center;
         }
+
+        .channel-item:hover {
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .player {
+            width: 100%;
+            background: #000;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            flex-grow: 1;
+            margin-bottom: 20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+        }
+
+        /* Clappr player will be styled dynamically */
+        #player {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Responsive styles */
+        @media (min-width: 768px) {
+            .tv-container {
+                flex-direction: row;
+            }
+
+            .channel-list {
+                max-width: 30%;
+                width: 30%;
+                border-radius: 10px;
+            }
+
+            .player {
+                width: 70%;
+                border-radius: 10px;
+                margin-right: 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .tv-container {
+                flex-direction: column;
+            }
+
+            .player {
+                border-radius: 10px;
+            }
+
+            .channel-list {
+                max-height: 55%;
+                width: 100%;
+                overflow-y: scroll;
+                margin-top: 8px;
+                border-radius: 10px;
+            }
+
+            .channel-item img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
     </style>
+</head>
+<body>
+    <header>
+        JagoBD WEB Portal
+        <hr class="hr">
+    </header>
+
+    
 
 
-		<!-- Codes by CWABDTV -->
 
-
-
-    <div class="alert dark">
-APP IS LAUNCHED AND WEBSITE IS UNDER CONSTRUCTION, 
-	    WANT TO BECOME OUR FAMILY MEMBER ?
-JOIN OUR TELEGRAM CHANNEL :
-	    Group https://t.me/@EarnMoneyPointBD
-Channel https://t.me/@EarnMoneyPointOfficial -- Team Admin
+    <div class="tv-container">
+        <div class="player">
+            <!-- Clappr player container -->
+            <div id="player"></div>
+        </div>
+        <div class="channel-list" id="channel-list"></div>
     </div>
 
+    <!-- Clappr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 
+    <script>
+        // Function to parse the playlist
+        function parseM3U8(playlist) {
+            const lines = playlist.split('\n');
+            let channels = [];
+            let currentChannel = {};
+            
+            lines.forEach(line => {
+                if (line.startsWith('#EXTINF')) {
+                    const name = line.split(',')[1];
+                    const logoMatch = line.match(/tvg-logo="(.+?)"/);
+                    const logo = logoMatch ? logoMatch[1] : '';
+                    currentChannel = { name, logo };
+                } else if (line.startsWith('http')) {
+                    currentChannel.url = line.trim();
+                    channels.push(currentChannel);
+                    currentChannel = {};
+                }
+            });
+            
+            return channels;
+        }
 
+        // Function to render the channel list
+        function renderChannelList(channels) {
+            const channelList = document.getElementById('channel-list');
+            channels.forEach((channel) => {
+                const channelItem = document.createElement('div');
+                channelItem.classList.add('channel-item');
+                channelItem.innerHTML = `
+                    <img src="${channel.logo}" alt="${channel.name}">
+                    <span>${channel.name}</span>
+                `;
+                channelItem.addEventListener('click', () => playChannel(channel.url));
+                channelList.appendChild(channelItem);
+            });
 
+            // Show content and hide loader after rendering
+            document.querySelector('.tv-container').style.opacity = 1; // Fade in the content
+            document.querySelector('.loader').style.display = 'none'; // Hide the loader
+        }
 
-		</div>
-	</section>
-<br>
-<br>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-select.min.js"></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/active.js"></script>
+        // Initialize Clappr player with default stream
+        let player = new Clappr.Player({
+            parentId: '#player',
+            source: 'https://mtlivestream.com/asian/ytlive/index.m3u8', // Set default stream
+            width: '100%',
+            height: '100%',
+            autoPlay: true,
+            mute: false,
+        });
+
+        // Function to play the selected channel
+        function playChannel(url) {
+            player.load(url);
+            player.play();
+        }
+
+        // Fetch the playlist from the external file
+        fetch('playlist.m3u8')
+            .then(response => response.text())
+            .then(playlist => {
+                const channels = parseM3U8(playlist);
+                renderChannelList(channels);
+            })
+            .catch(error => console.error('Error fetching the playlist:', error));
+    </script>
+    
 	       <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
 </body>
 
